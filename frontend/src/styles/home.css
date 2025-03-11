@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #0d0d0d, #000000);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.tempus-logo {
+  font-size: 5rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    224deg,
+    #ffffff,
+    #1e40af 20%,
+    #ffffff 40%,
+    #1e40af 60%,
+    #fff 80%
+  );
+  background-size: 800% 800%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateGradient 3s linear infinite;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: 7px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(224deg, #1e40af, #3b82f6);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: linear-gradient(224deg, #3b82f6, #1e40af);
+  transform: scale(1.05);
+}
