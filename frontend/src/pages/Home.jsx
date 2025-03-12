@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
 const Home = () => {
-  const [gradient, setGradient] = useState("");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setGradient(`linear-gradient(90deg, #fff, #1e40af, #fff)`);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <div className="home-container">
-      <h1 className="tempus-logo" style={{ backgroundImage: gradient }}>
-        TEMPUS
-      </h1>
-      <p className="subtitle">Reserve seu tempo</p>
-      <button className="cta-button">Fazer Reserva</button>
+    <div className="hero">
+      <div className="hero-content">
+        <h1 className="tempus-logo">TEMPUS</h1>
+        <p>Reserve seu horário de forma rápida e eficiente.</p>
+        <button
+          className="reserve-button"
+          onCLick={() => navigate("/reservas")}
+        >
+          Reserve agora
+        </button>
+      </div>
     </div>
   );
 };
-console.log("Home está carregando");
-
-export default Home;
