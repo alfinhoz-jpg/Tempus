@@ -1,0 +1,18 @@
+{% extends "admin/base_site.html" %} {% block title %}Dashboard - Tempus{%
+endblock %} {% block content %}
+<div class="dashboard">
+  <h1>Bem-vindo ao Painel Administrativo</h1>
+  <p>Aqui você pode gerenciar reservas, usuários e o sistema.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Usuários</h3>
+      <p>{{ user_count }} cadastrados</p>
+    </div>
+    <div class="card">
+      <h3>Reservas</h3>
+      <p>{{ reserva_count }} reservas feitas</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
