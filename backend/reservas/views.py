@@ -2,7 +2,7 @@ from rest_framework import viewsets, permissions
 from .models import Reserva
 from .serializers import ReservaSerializer 
 from django.http import JsonResponse
-
+from .serializers import ReservaSerializer  
 class ReservaViewSet(viewsets.ModelViewSet):
     queryset = Reserva.objects.all().order_by('-data_horario')
     serializer_class = ReservaSerializer
