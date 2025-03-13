@@ -28,6 +28,4 @@ def custom_admin_css():
 
 admin.AdminSite.media = property(lambda self: {"css": {"all": custom_admin_css()}})
 
-
-
 admin.site = CustomAdminSite()
